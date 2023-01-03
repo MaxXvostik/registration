@@ -5,14 +5,17 @@
   <title>My page</title>
  </head> 
  <body>
-
   <nav>
-    <a href="./index.html">Home</a> |
-    <a href="./login.html">Login</a> |
+    <a href="./index.html">Home</a> 
+    {{ if eq .uid 0 }}
+    |
+    <a href="./login.html">Login</a> 
+    |
     <a href="./signup.html">Signup</a>
+    {{ end }}
   </nav>
   <article>
-    <h2>My page</h2>
+    <h2>My page. I user# {{.uid}}</h2>
   </article>
  </body> 
 </html>
